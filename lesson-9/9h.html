@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9h - Input</title>
+  </head>
+
+  <body>
+    <input class="text-input" placeholder="Type something">
+
+    <p class="result"></p>
+
+    <script>
+      const input = document.querySelector('.text-input');
+      const result = document.querySelector('.result');
+
+      input.addEventListener('input', function() {
+        result.innerHTML = input.value;
+      });
+    </script>
+  </body>
+</html>
