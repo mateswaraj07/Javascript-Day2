@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9f - DOM</title>
+  </head>
+
+  <body>
+    <input class="name-input" placeholder="Enter your name">
+
+    <button class="submit-button">Submit</button>
+
+    <p class="result"></p>
+
+    <script>
+      const input = document.querySelector('.name-input');
+      const button = document.querySelector('.submit-button');
+      const result = document.querySelector('.result');
+
+      function displayName() {
+        result.innerHTML = `Your name is: ${input.value}`;
+      }
+
+      button.addEventListener('click', displayName);
+
+      input.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+          displayName();
+        }
+      });
+    </script>
+  </body>
+</html>
