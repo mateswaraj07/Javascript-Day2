@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>9c - DOM</title>
+  </head>
+
+  <body>
+    <button class="heads-button">heads</button>
+    <button class="tails-button">tails</button>
+
+    <p class="result"></p>
+
+    <script>
+      const headsButton = document.querySelector('.heads-button');
+      const tailsButton = document.querySelector('.tails-button');
+      const result = document.querySelector('.result');
+
+      headsButton.addEventListener('click', function() {
+        result.innerHTML = 'You chose: heads';
+      });
+
+      tailsButton.addEventListener('click', function() {
+        result.innerHTML = 'You chose: tails';
+      });
+    </script>
+  </body>
+</html>
